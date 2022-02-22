@@ -43,6 +43,7 @@ void    reset()
 {
     printf("\033[0m");
 }
+
 // int main ()
 // {
 //     red();
@@ -50,17 +51,5 @@ void    reset()
 //     yellow();
 //     printf("world\n");
 //     reset();
-//     return 0;
-// }
-
-// int main(int argc, char **argv)
-// {
-//     int i = 1;
-//     while (i < argc)
-//     {
-//         red();
-//         printf("%s\n",argv[i++]);
-//         reset();
-//     }
 //     return 0;
 // }

@@ -11,7 +11,6 @@ int	main(int argc, char **argv)
 	stack_a = ft_newnode(ft_atoi(argv[1]));
 	stack_b = NULL;
 
-
     int i = 2;
     while (i < argc)
     {
@@ -19,10 +18,14 @@ int	main(int argc, char **argv)
         i++;
     }
     
-    // swap_a(&stack_a);
+    // rotate_reverse_a(&stack_a);   
     red();
-    printf("------ stack a ------\n");
+    printf("------ STACK A ------\n");
     reset();
     ft_display(stack_a);
+    yellow();
+    printf("------ STACK B ------\n");
+    reset();
+    ft_display(stack_b);
     return 0;
 }

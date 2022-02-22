@@ -11,7 +11,7 @@ typedef struct s_list
     struct s_list *next;
 }   t_list;
 
-t_list  *ft_newnode(void  *content);
+t_list  *ft_newnode(int	content);
 int		ft_nodesize(t_list	*list);
 t_list	*ft_lastlist(t_list	*list);
 void	ft_display(t_list	*node);
