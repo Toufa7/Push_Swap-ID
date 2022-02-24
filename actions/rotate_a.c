@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "actions.h"
 
 void	rotate_a(t_list **stack_a)
 {
@@ -7,5 +7,7 @@ void	rotate_a(t_list **stack_a)
 	temp = *stack_a;
 	*stack_a = (*stack_a)->next;
 	temp->next = NULL;
-	ft_addtofront(stack_a, temp);
+	ft_addtoback(stack_a, temp);
 }
+
+/* Shift up all elements of stack a by 1. The first element becomes the last one */

@@ -6,10 +6,11 @@
 /*   By: otoufah <otoufah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:46:36 by otoufah           #+#    #+#             */
-/*   Updated: 2022/02/22 15:37:51 by otoufah          ###   ########.fr       */
+/*   Updated: 2022/02/23 15:01:18 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+
+#include "actions.h"
 
 void	push_a(t_list **stack_a, t_list	**stack_b)
 {
@@ -20,3 +21,7 @@ void	push_a(t_list **stack_a, t_list	**stack_b)
 	temp->next = NULL;
 	ft_addtofront(stack_a, temp);
 }
+
+/*
+Take the first element at the top of b and put it at the top of a.
+*/

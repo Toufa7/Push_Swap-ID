@@ -1,13 +1,14 @@
 #ifndef LINKEDLIST_H
 #define	LINKEDLIST_H
 
+#include "../ft_printf/ft_printf.h"
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 
 typedef struct s_list
 {
-    void    *content;
+    int	content;
     struct s_list *next;
 }   t_list;
 

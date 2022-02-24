@@ -1,4 +1,7 @@
-
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <limits.h>
 
 // i'll check if the arguments to be given it's a digit
 
@@ -17,4 +20,14 @@ void    digit(int nbr)
         nbr++;
         exit(1);
     }
+}
+
+int	main(int argc, char **argv)
+{
+    int i = 1;
+    while (i < argc)
+    {
+        digit(argv);
+    }
+
 }

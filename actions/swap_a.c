@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   swap_a.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: otoufah <otoufah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 15:38:55 by otoufah           #+#    #+#             */
-/*   Updated: 2022/02/22 15:39:57 by otoufah          ###   ########.fr       */
+/*   Updated: 2022/02/24 13:46:12 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
 
+#include "actions.h"
 // Creat a node
 // give it the head of the list
 // Now since the head is empty so store in it the next content
@@ -26,8 +26,13 @@ void	swap_a(t_list	**stack_a)
 {
 	t_list	*temp;
 
-	temp = *stack_a;
-	*stack_a = (*stack_a)->next;
-	temp->next = (*stack_a)->next;
-	(*stack_a)->next = temp;
+	if (ft_nodesize(*stack_a) > 1)
+	{
+		temp = *stack_a;
+		*stack_a = (*stack_a)->next;
+		temp->next = (*stack_a)->next;
+		(*stack_a)->next = temp;
+	}	
 }
+
+/* Swap the first 2 elements at the top of stack a do nothing if there is only one or no elements */

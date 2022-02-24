@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "actions.h"
 
 // Creat a node
 // give it the head of the list
@@ -22,4 +22,7 @@ void    swap_b(t_list   **stack_b)
     *stack_b = (*stack_b)->next;
     temp->next = (*stack_b)->next;
     (*stack_b)->next = temp;
+
 }
+
+/*  Swap the first 2 elements at the top of stack b Do nothing if there is only one or no elements. */
