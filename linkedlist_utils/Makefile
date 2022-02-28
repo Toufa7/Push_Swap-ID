@@ -31,5 +31,3 @@ clean :
 fclean : clean
 			$(RM) $(NAME)
 			@echo "LINKEDLIST DESTROYED"
-
-

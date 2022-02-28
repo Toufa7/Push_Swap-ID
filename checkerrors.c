@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <limits.h>
+#include "push_swap.h"
 
 // i'll check if the arguments to be given it's a digit
 
@@ -11,23 +8,35 @@
 
 // if i'm not include any argument nothing to be showed
 
-void    digit(int nbr)
+// void    check_digit(char *nbr)
+// {
+//     if (nbr >= 48 && nbr <= 57)
+//         ft_putstr(nbr);
+//     else
+//         ft_putstr("Error");
+// }
+
+int	ft_isdigit(int c)
 {
-    while (nbr)
-    {
-        if (!(nbr >= 48 && nbr <= 57 && nbr == 32))
-            write(1,"Error",6);
-        nbr++;
-        exit(1);
-    }
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }
 
-int	main(int argc, char **argv)
-{
-    int i = 1;
-    while (i < argc)
-    {
-        digit(argv);
-    }
 
+int main(int argc, char const *argv[])
+{
+    int i = 0;
+    int a = 1;
+    while (a < argc)
+    {
+        {
+            if (ft_isdigit(ft_atoi(argv[i++])) == 1)
+                ft_potstr(ft_atoi(argv[i++]));
+            else
+                ft_potstr("Error\n");
+        }
+        a++;
+    }
 }

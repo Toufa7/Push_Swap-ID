@@ -15,6 +15,7 @@ void    rotate_reverse_a(t_list **stack_a)
     }
 	prelast->next= NULL;
 	ft_addtofront(stack_a, last);
+	ft_putstr("rra\n");
 }
 
 /* Shift down all elements of stack a by 1. The last element becomes the first one */
