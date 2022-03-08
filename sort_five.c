@@ -1,15 +1,16 @@
-#include    "push_swap.h"
-void	check_exist(char **av)
-{
-	int	i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_five.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: otoufah <otoufah@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/06 12:34:11 by otoufah           #+#    #+#             */
+/*   Updated: 2022/03/06 17:04:48 by otoufah          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	i = 0;
-	if (!av[i])
-	{
-		ft_putstr_fd("Error: fill stack A with Integers!", 2);
-		exit(1);
-	}
-}
+#include "push_swap.h"
 
 int	check_sorted(int n, char **av)
 {
@@ -22,30 +23,15 @@ int	check_sorted(int n, char **av)
 		j = i + 1;
 		while (av[j])
 		{
-			if (ft_strcmp(av[i],av[j]) >= 0) // in this they are not sorted
+			if (ft_strcmp(av[i], av[j]) >= 0)
 			{
-                return (0);
+				return (0);
 			}
 			j++;
 		}
 		i++;
 	}
-    return (1);
-}
-
-int	get_index(t_list *stack, int look)
-{
-	int	i;
-
-	i = 1;
-	while (stack)
-	{
-		if (stack->content == look)
-			return (i);
-		stack = stack->next;
-		i++;
-	}
-	return (0);
+	return (1);
 }
 
 int find_min(t_list *stack)
@@ -76,39 +62,23 @@ int find_max(t_list *stack)
 	return (max);
 }
 
-void    push_small_numbers(t_list   **stack_a, t_list   **stack_b)
+void push_small_numbers(t_list **stack_a, t_list **stack_b)
 {
-    int size;
-    int min;
-    int idx;
-    int n;
+	int	size;
+	int	min;
 
-    size = ft_nodesize(*stack_a);
-    while (size > 3)
-    {
-		// printf("This is min %d\n",min);
-		// printf("This is size %d\n",size);
-		// printf("This is idx %d\n",idx);
-		min  = find_min(*stack_a);
-        idx = get_index(*stack_a,min);
-		if ( min == (*stack_a)->next->content)
+	size = ft_nodesize(*stack_a);
+	min = find_min(*stack_a);
+    while (size >= 3)
+	{
+		if (min == (*stack_a)->content)
 		{
-			swap_a(stack_a);
-		}
-        if (idx <= size / 2)
-		{
-			n = idx - 1;
-			while (n-- > 0)
-				rotate_a(stack_a);
+			push_b(stack_a, stack_b);
+			min = find_min(*stack_a);
+			size--;
 		}
 		else
-		{  
-			n = size - idx + 1;
-			while (n-- > 0)
-				rotate_reverse_a(stack_a);
-		}
-		push_b(stack_a, stack_b);
-		size--;
+			rotate_reverse_a(stack_a);
 	}
 }
 
@@ -154,24 +124,18 @@ void sort_three(t_list **stack_a)
     }
 }
 
-
-
-int	main(int arc, char *argv[])
+int main(int argc, char *argv[])
 {
-    t_list	*stack_a = ft_stackfill(arc, argv);
+    t_list	*stack_a = ft_stackfill(argc, argv);
     t_list  *stack_b = NULL;
 
-	check_exist(argv);
-
-    if (check_sorted(arc,argv) == 1)
+    if (check_sorted(argc,argv) == 1)
         exit(1);
 
     push_small_numbers(&stack_a, &stack_b);
     sort_three(&stack_a);
     while(stack_b)
         push_a(&stack_a, &stack_b);
-	// printf("------ A ------\n");
-    // ft_display(stack_a);
-    // printf("------ B ------\n");
-    // ft_display(stack_b);
+	printf("------ A ------\n");
+    ft_display(stack_a);
 }

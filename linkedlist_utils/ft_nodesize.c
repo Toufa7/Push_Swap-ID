@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_nodesize.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: otoufah <otoufah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:58:17 by otoufah           #+#    #+#             */
-/*   Updated: 2022/02/24 11:58:20 by otoufah          ###   ########.fr       */
+/*   Updated: 2022/03/07 10:55:39 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "linkedlist.h"
 
 int	ft_nodesize(t_list	*list)
 {
 	int	idx;
 
-	idx = 0;
+	idx = 1;
 	while (list->next != NULL)
 	{
 		list = list->next;
