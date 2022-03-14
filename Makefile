@@ -73,8 +73,11 @@ FUNCTION =	linkedlist_utils/ft_newnode.c\
 			ft_printf/ft_hexlen.c\
 			check_sorted.c\
 			get_index.c\
-
-
+			convert_linkedlist.c\
+			selecting_sort.c\
+			least_moves.c\
+			find_max_min.c\
+	
 OBJECTS =	$(FUNCTION:.c=.o)
 
 all : $(NAME)
