@@ -24,7 +24,7 @@ FUNCTION =	linkedlist_utils/ft_newnode.c\
             actions/rotate_b.c\
             actions/rotate_a_b.c\
             actions/reverse_rotate_a.c\
-            actions/reverse_rotate_a.c\
+            actions/reverse_rotate_b.c\
             actions/reverse_rotate_a_b.c\
 			libft/ft_isalpha.c\
 			libft/ft_isdigit.c\
@@ -75,8 +75,10 @@ FUNCTION =	linkedlist_utils/ft_newnode.c\
 			get_index.c\
 			convert_linkedlist.c\
 			selecting_sort.c\
-			least_moves.c\
 			find_max_min.c\
+			sort_three.c\
+			least_moves_from_a.c\
+			least_moves_from_b.c\
 	
 OBJECTS =	$(FUNCTION:.c=.o)
 

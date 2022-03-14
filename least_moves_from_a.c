@@ -1,15 +1,14 @@
 #include "push_swap.h"
 
-void    least_moves(t_list   **stack_a, t_list   **stack_b)
+void    least_moves_from_a(t_list   **stack_a, t_list   **stack_b)
 {
-    printf("dssn\n");
     int size;
     int min;
     int idx;
     int n;
 
     size = ft_nodesize(*stack_a);
-    printf("This is the size of Stack A %d\n", size);
+    // printf("This is the size of Stack A %d\n", size);
     while (size > 3)
     {
 		min  = find_min(*stack_a);

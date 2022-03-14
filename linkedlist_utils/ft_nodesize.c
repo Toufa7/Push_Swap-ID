@@ -6,7 +6,7 @@
 /*   By: otoufah <otoufah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:58:17 by otoufah           #+#    #+#             */
-/*   Updated: 2022/03/14 15:44:37 by otoufah          ###   ########.fr       */
+/*   Updated: 2022/03/14 21:40:46 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_nodesize(t_list	*list)
 {
 	int	idx;
 
-	idx = 0;
+	idx = 1;
 	while (list->next != NULL)
 	{
 		list = list->next;
