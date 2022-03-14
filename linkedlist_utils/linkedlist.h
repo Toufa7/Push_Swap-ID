@@ -6,7 +6,7 @@
 /*   By: otoufah <otoufah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 14:37:34 by otoufah           #+#    #+#             */
-/*   Updated: 2022/03/02 20:59:11 by otoufah          ###   ########.fr       */
+/*   Updated: 2022/03/09 16:39:10 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@
 typedef struct s_list
 {
     int	content;
+    int idx;
     struct s_list *next;
 }   t_list;
 
-t_list	*ft_newnode(int	content);
+t_list	*ft_newnode(int	content, int idx);
 int		ft_nodesize(t_list	*list);
 t_list	*ft_lastlist(t_list	*list);
 void	ft_display(t_list	*node);

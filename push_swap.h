@@ -11,6 +11,7 @@
 #include "actions/actions.h"
 #include "linkedlist_utils/linkedlist.h"
 
-
+int	check_sorted(int n, char **av);
+int	get_index(t_list *stack, int look);
 
 #endif

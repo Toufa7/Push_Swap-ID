@@ -1,0 +1,78 @@
+5 9 4 3 8 array
+
+3  4 5 8 9 sorted array
+
+
+
+2 4 1 0 3 stack A
+
+
+
+
+5 9 1
+
+1 2 0
+
+
+01 00  10
+10 01 00
+
+
+
+
+           6           5           4           1           3           7          2         8
+
+00000000000000000001001
+
+
+
+
+
+1-create array of int 
+
+2-sort this array
+
+3- create stack a  indexex
+
+4 - size of max value of byte -> n
+
+loop i = 0 -> n
+{
+    j = > number of elem
+    {
+        if curr_byte == 0
+          push_b
+        else 
+            ra
+    }
+
+    while (stackb)
+        pa;
+}
+
+
+
+
+
+001100 A
+
+a << 2
+
+
+a >> 2
+
+000110
+000100
+000100
+
+
+
+
+
+
+
+
+
+
+
+
