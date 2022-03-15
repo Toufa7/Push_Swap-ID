@@ -8,15 +8,10 @@ void    least_moves_from_a(t_list   **stack_a, t_list   **stack_b)
     int n;
 
     size = ft_nodesize(*stack_a);
-    // printf("This is the size of Stack A %d\n", size);
     while (size > 3)
     {
 		min  = find_min(*stack_a);
         idx = get_index(*stack_a,min);
-		if (min == (*stack_a)->next->content)
-		{
-			swap_a(stack_a);
-		}
         if (idx <= size / 2)
 		{
 			n = idx - 1;

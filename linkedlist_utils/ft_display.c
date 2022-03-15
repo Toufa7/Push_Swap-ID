@@ -6,7 +6,7 @@
 /*   By: otoufah <otoufah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 18:44:02 by otoufah           #+#    #+#             */
-/*   Updated: 2022/03/09 16:41:53 by otoufah          ###   ########.fr       */
+/*   Updated: 2022/03/15 13:21:10 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_display(t_list	*node)
 {
 	while (node != NULL)
 	{
-		ft_printf("[%d] - |%d|\n",node->idx ,node->content);
+		ft_printf("|%d|\n",node->content);
 		node = node->next;
 	}
 }

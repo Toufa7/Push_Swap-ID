@@ -3,27 +3,23 @@
 void    least_moves_from_b(t_list   **stack_a, t_list   **stack_b)
 {
     int size;
-    int min;
+    int max;
     int idx;
     int n;
 
-    size = ft_nodesize(*stack_a);
-    // printf("This is the size of Stack A %d\n", size);
+
+    size = ft_nodesize(*stack_b);
     while (size > 3)
     {
-		min  = find_max(*stack_b);
-        idx = get_index(*stack_b,min);
-		if (min == (*stack_b)->next->content)
-		{
-			swap_a(stack_a);
-		}
-        if (idx <= size / 2)
+		max = find_max(*stack_b);
+        idx = get_index(*stack_b,max);
+        if (idx <= size / 2 && idx != 0)
 		{
 			n = idx - 1;
 			while (n-- > 0)
 				rotate_b(stack_b);
 		}
-		else
+		else if (idx != 0)
 		{  
 			n = size - idx + 1;
 			while (n-- > 0)
@@ -32,4 +28,5 @@ void    least_moves_from_b(t_list   **stack_a, t_list   **stack_b)
 		push_a(stack_a, stack_b);
 		size--;
 	}
+	push_a(stack_a, stack_b);
 }

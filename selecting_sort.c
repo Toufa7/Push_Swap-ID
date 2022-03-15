@@ -37,6 +37,5 @@ int     *selectionsort(int arr[], int n)
     //     printf("|%d| -- |%d|\n",i, arr[i]);
     //     i++;
     // }
-
     return (arr);
 }
